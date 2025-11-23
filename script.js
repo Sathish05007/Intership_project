@@ -1,3 +1,4 @@
+
 /* ---------- Place info ---------- */
 const info = {
   baranti: `<h2>Baranti Lake</h2>
@@ -296,3 +297,6 @@ document.addEventListener("DOMContentLoaded", () => {
   renderReviews();
   startAutoScroll();
 });
+
+
+// localStorage.clear()

@@ -297,6 +297,16 @@ section{
         animation: fadeIn 0.3s ease;
     }
 
+    .modal-content select {
+  position: relative;
+  z-index: 10;
+  background: white;
+}
+.modal {
+  z-index: 9999;
+}
+
+
     @keyframes fadeIn {
         from {opacity: 0; transform: scale(0.9);}
         to {opacity: 1; transform: scale(1);}
@@ -746,6 +756,73 @@ footer {
   text-align: center;
 }
 
+/* ---------------------------------------------
+   KEYFRAMES  
+---------------------------------------------- */
+
+@keyframes fadeLeft {
+    from { opacity: 0; transform: translateX(-60px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeRight {
+    from { opacity: 0; transform: translateX(60px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(60px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeCenter {
+    from { opacity: 0; transform: scale(0.4); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+/* ---------------------------------------------
+   ANIMATION CLASSES  
+---------------------------------------------- */
+
+.fade-left {
+    opacity: 0;
+    animation: fadeLeft 1.2s ease forwards;
+}
+
+.fade-right {
+    opacity: 0;
+    animation: fadeRight 1.2s ease forwards;
+}
+
+.fade-top {
+    opacity: 0;
+    animation: fadeUp 1.2s ease forwards;
+}
+
+.fade-center {
+    opacity: 0;
+    animation: fadeCenter 1.4s ease forwards;
+}
+
+/* Slower versions */
+.fade-slow {
+    animation-duration: 1.8s !important;
+}
+
+.fade-right {
+    animation: fadeRight 1.2s ease forwards, fadeRight 3s ease-in-out infinite;
+}
+
+/* Smooth transition for AOS */
+[data-aos] {
+  transition: all 1s ease-in-out;
+}
+
+
+.modal *[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+}
 
 @media screen and (max-width:321px) {
   .d-message {
