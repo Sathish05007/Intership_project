@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kingsukh Guest House</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+   <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <!-- Left: Logo -->
+        <a class="navbar-brand" href="#">Kingsukh <br />
+          <span>Guest</span> House</a>
+
+        <!-- Toggle Button  -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Nav Links + Book Now  -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-lg-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#rooms">Rooms</a></li>
+            <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact-info">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          </ul>
+          <div class="text-lg-end text-start">
+            <button class="book-now-btn book-btn" onclick="openModal()">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section id="hero">
+      <div class="hero">
+        <h1>Make Yourself At Home In <span>Our Guest House</span></h1>
+        <h3>Simple -- Unique -- Friendly</h3>
+        <button class="h-btn book-btn" onclick="openModal()">Book Now</button>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="about">
+        <div class="about-left">
+          <img src="./img/out.jpg" alt="" />
+        </div>
+        <div class="about-right">
+          <p>
+            <span>The Best Holidays Start Here!</span> Embark on a tranquil
+            journey at our Kingsukh Guest House, enveloped by the scenic
+            allure of Biharinath Hill, Baranti Hill, Susunia Hill, Joychandi
+            Hill, Garhpanchkot, Baranti Dam, Maithon Dam, and the captivating
+            Panchat Dam.
+          </p>
+          <p>
+            Revel in the embrace of comfort, relish delightful meals, and
+            unwind in our verdant garden oasis. Your ideal retreat beckons,
+            promising a harmonious blend of nature's beauty and heartfelt
+            hospitality. Explore the hidden gems of Purulia, creating memories
+            that linger long after your stay.
+          </p>
+          <p id="address">
+            Address: Beside Barshal Water Tank, Manpur, Barhanti, West Bengal
+            723156 Contact us: +91 9007062180
+          </p>
+          <button class="a-btn book-btn" onclick="openModal()">Book Now</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="rooms">
+      <div class="room">
+        <div class="room1">
+          <img src="./img/large.jpg" alt="" />
+          <h3>Cozy Haven Room</h3>
+          <p>
+            Escape to comfort in our Cozy Haven Room, a snug retreat designed
+            for intimate relaxation.
+          </p>
+          <p id="price">Starting from <span>Rs. 1000/night</span></p>
+          <button class="r-btn book-btn" onclick="openModal()">Book Now</button>
+        </div>
+        <div class="room1">
+          <img src="./img/small.jpg" alt="" />
+          <h3>Spacious Serenity Suite</h3>
+          <p>
+            Indulge in luxury and ample space in our Spacious Serenity Suite, where tranquility meets roomy elegance.
+          </p>
+          <p id="price">Starting from <span>Rs. 1500/night</span></p>
+          <button class="r-btn book-btn" onclick="openModal()">Book Now</button>
+        </div>
+        <div class="room1">
+          <img src="./img/room1.jpg" alt="" />
+          <h3>Cozy Haven Room</h3>
+          <p>
+            Escape to comfort in our Cozy Haven Room, a snug retreat designed
+            for intimate relaxation.
+          </p>
+          <p id="price">Starting from <span>Rs. 1000/night</span></p>
+          <button class="r-btn book-btn" onclick="openModal()">Book Now</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <p>Everything you need for a comfortable and memorable stay</p>
+      <div class="services">
+        <div class="s1">
+          <img src="./img/encrypted.png" alt="">
+          <h3>24/7 Security</h3>
+          <p>Round-the-clock security for your peace of mind</p>
+        </div>
+        <div class="s1">
+          <img src="./img/time.png" alt="">
+          <h3>24-Hours Room Service</h3>
+          <p>Any time,any request_we are here for you</p>
+        </div>
+        <div class="s1">
+          <img src="./img/cutlery.png" alt="">
+          <h3>Gourmet Dining</h3>
+          <p>Exquisite cuisine with local and international flavors</p>
+        </div>
+        <div class="s1">
+          <img src="./img/location.png" alt="">
+          <h3>Tourist Guide Support</h3>
+          <p>Expert local guide for your mountain adventures</p>
+        </div>
+        <div class="s1">
+          <img src="./img/signal.png" alt="">
+          <h3>Free WiFi</h3>
+          <p>High-speed internet throughout the property</p>
+        </div>
+        <div class="s1">
+          <img src="./img/man.png" alt="">
+          <h3>Laundry Service</h3>
+          <p>Professional laundry and dry cleaning available</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="places">
+      <div class="grid">
+        <div class="card">
+          <img src="./img/Sunset_at_Baranti_Lake.jpg" alt="Baranti Lake">
+          <h3>Baranti Lake</h3>
+          <button class="more-btn" onclick="openModal('baranti')">More</button>
+        </div>
+
+        <div class="card">
+          <img src="./img/678f524eb2e5671c2ab849d5_1737445966027.jpg" alt="Baranti Lake">
+          <h3>Garh Panchkot</h3>
+          <button class="more-btn" onclick="openModal('garh')">More</button>
+        </div>
+
+        <div class="card">
+          <img src="./img/Know-About-the-Forest-and-Wildlife-of-Biharinath-Hill3.webp" alt="Baranti Lake">
+          <h3>Biharinath Hill</h3>
+          <button class="more-btn" onclick="openModal('biharinath')">More</button>
+        </div>
+
+        <div class="card">
+          <img src="./img/trek-to-biharinath-hill.jpg" alt="Baranti Lake">
+          <h3>Joychandi Hill</h3>
+          <button class="more-btn" onclick="openModal('joychandi')">More</button>
+        </div>
+
+        <div class="card">
+          <img src="./img/1599648805_08dhan-new-look-of-maithon-dam-in-new-year-3.jpg" alt="Baranti Lake">
+          <h3>Panchet Dam</h3>
+          <button class="more-btn" onclick="openModal('panchet')">More</button>
+        </div>
+
+        <div class="card">
+          <img src="./img/Panchet_Dam_(DVC)_Dhanbad.jpg" alt="Baranti Lake">
+          <h3>Maithon Dam</h3>
+          <button class="more-btn" onclick="openModal('maithon')">More</button>
+        </div>
+
+        <div class="card">
+          <img src="./img/ayodhya.webp" alt="Baranti Lake">
+          <h3>Maithon Dam</h3>
+          <button class="more-btn" onclick="openModal('maithon')">More</button>
+        </div>
+        <div class="card">
+          <img src="./img/ayodhya.webp" alt="Baranti Lake">
+          <h3>Susunia Hill</h3>
+          <button class="more-btn" onclick="openModal('susunia')">More</button>
+        </div>
+      </div>
+
+
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <div id="modal-text"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="reviews" id="customers">
+      <h2>Our Customers</h2>
+      <div class="reviews-wrapper">
+        <div class="reviews-track" id="reviewsContainer">
+          <!-- Dynamic reviews will appear here -->
+        </div>
+      </div>
+    </section>
+
+    <div class="feedback-form">
+      <h2>Write Feedback</h2>
+      <form id="feedbackForm">
+        <input type="text" id="name" placeholder="Enter Name" required>
+        <input type="tel" id="phone" placeholder="Enter Phone" required pattern="[0-9]{10}">
+        <input type="text" id="location" placeholder="Enter Location" required>
+        <textarea id="message" rows="3" placeholder="Write Message" required></textarea>
+        <select id="stars" required>
+          <option value="">Select Rating</option>
+          <option value="1">⭐</option>
+          <option value="2">⭐⭐</option>
+          <option value="3">⭐⭐⭐</option>
+          <option value="4">⭐⭐⭐⭐</option>
+          <option value="5">⭐⭐⭐⭐⭐</option>
+        </select>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+<section id="contact-info">
+<div class="container">
+    <div class="contact-info">
+        <h2>Contact Info</h2>
+        <p><strong>Address:</strong> Besrail Water Tank,  
+            Bagmari Road, Kolkata, West Bengal 723156</p>
+        <p><strong>Email:</strong> kkghosh009@gmail.com</p>
+        <p><strong>Phone:</strong> +91 90070 62180</p>
+
+        <div class="social">
+         <i class="bi bi-facebook"></i>
+      <i class="bi bi-twitter-x"></i>
+      <i class="bi bi-whatsapp"></i>
+      <i class="bi bi-instagram"></i>
+        </div>
+    </div>
+
+    <div class="form-box">
+        <h2>Send a Message</h2>
+
+        <form id="contactForm">
+            <div class="row">
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+            </div>
+            <div class="row">
+                <input type="email" placeholder="Email Address" required>
+                <input type="text" placeholder="Mobile Number" required>
+            </div>
+            <textarea placeholder="Write your message here..." required></textarea>
+
+            <button type="button" onclick="sendWhatsApp()">Send</button>
+        </form>
+    </div>
+</div>
+</section>
+
+<section id="gallery">
+  <h2 class="gallery-title">Gallery</h2>
+
+  <div class="gallery-container">
+    <img src="./img/ayodhya.webp" alt="Gallery Image">
+    <img src="./img/palash.webp" alt="Gallery Image">
+    <img src="./img/out.jpg" alt="Gallery Image">
+    <img src="./img/recep.jpg" alt="Gallery Image">
+    <img src="./img/ayodhya.webp" alt="Gallery Image">
+    <img src="./img/palash.webp" alt="Gallery Image">
+    <img src="./img/out.jpg" alt="Gallery Image">
+    <img src="./img/recep.jpg" alt="Gallery Image">
+    <img src="./img/out.jpg" alt="Gallery Image">
+  </div>
+</section>
+
+<section id="faq">
+  <div class="faq-container">
+    <h2>FAQ</h2>
+
+    <div class="faq-row">
+
+      <!-- Column 1 -->
+      <div class="faq-col">
+        
+        <div class="faq-item">
+          <button class="faq-question">
+            1. What are the check-in and check-out times?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Check-in is from 2 PM and check-out is until 11 AM.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            2. Is breakfast included?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, complimentary breakfast is provided for all guests.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            3. Can I bring pets?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Pets are not allowed inside the guest house premises.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            4. Do you offer airport pickup?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, on prior request and subject to availability.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            5. Are there parking facilities?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, free parking is available for all guests.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            6. Is Wi-Fi available?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, free high-speed Wi-Fi is available throughout the property.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Column 2 -->
+      <div class="faq-col">
+
+        <div class="faq-item">
+          <button class="faq-question">
+            7. How can I make a booking?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>You can book via website, WhatsApp, or call us.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            8. Are there discounts for long stays?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, we offer discounts for long stays.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            9. Is room service available?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, room service is available from 7 AM to 10 PM.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            10. Are children allowed?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, children of all ages are welcome.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            11. Can I cancel my booking?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Free cancellation up to 24 hours before check-in.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            12. Are there any nearby attractions?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, tourist spots and restaurants within 5 km.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+  </main>
+
+  <footer>
+    <div class="footer">
+    <div class="f1">
+      <h3>kingsukh Guest <br> House</h3>
+      <p>Discover a world of <br> comfort,
+        luxury,and adventure as <br> you explore 
+        our curated selection of <br>hotels,making,
+        every moment of <br>your getway truly extraordinary.</p>
+      <button class="book-now-btn book-btn" onclick="openModal()">Book Now</button>
+    </div>
+    <div class="f1">
+      <h3>QUICK LINKS</h3>
+      <p>Browse Destinations</p>
+      <p>Special Offers & Packages</p>
+      <p>Room Types & Amenities</p>
+      <p>Customer Reviews & Ratings</p>
+      <p>Travel Tips & Guides</p>
+    </div>
+    <div class="f1">
+      <h3>OUR SERVICES</h3>
+      <p>Concierge Assistance</p>
+      <p>Flexible Booking Options</p>
+      <p>Airpost Transfers</p>
+      <p>Wellness & Recreaton</p>
+    </div>
+    <div class="f1">
+      <h3>CONTACT US</h3>
+      <p>Address:Beside Barshal Water Tank,<br>
+        Manpur,Barhanti,West Bengal <br>
+        723156</p>
+      <p>+91 9007062180</p>
+      <i class="bi bi-facebook"></i>
+      <i class="bi bi-twitter-x"></i>
+      <i class="bi bi-whatsapp"></i>
+      <i class="bi bi-instagram"></i>
+
+
+    </div>
+    </div>
+  </footer>
+  <p class="copy-r">all rights recived by &copy;sathishejjagiri-2025</p>
+   <div class="d-message">
+      <a
+    href="https://wa.me/919007062180"
+    class="whatsapp-float"
+    target="_blank"
+  >
+
+    <img src="./img/whatsapp.png" alt="whatsapp">
+    </a>
+   </div>
+   <!-- Booking Form Modal -->
+<div id="bookingModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <h2>Book Your Room</h2>
+
+    <form id="bookingForm">
+
+      <label>Name</label>
+      <input type="text" id="name" required>
+
+      <label>Place</label>
+      <input type="text" id="place" required>
+
+      <label>Phone Number</label>
+      <input type="tel" id="phone" required>
+
+      <label>Email</label>
+      <input type="email" id="email" required>
+
+      <label>Duration</label>
+      <input type="text" id="duration" required>
+
+      <label>Type of Room</label>
+      <select id="roomType">
+        <option value="Cozy Haven Room">Cozy Haven Room</option>
+        <option value="Spacious Serenity Suite">Spacious Serenity Suite</option>
+      </select>
+
+      <label>No. of Members</label>
+      <input type="number" id="members" required>
+
+      <button type="button" onclick="sendWhatsApp()" class="f-btn">Book</button>
+
+    </form>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
