@@ -244,17 +244,17 @@ function sendWhatsApp() {
             return alert("Please provide name and phone for booking.");
 
         const msg =
-`🟦 New Room Booking 🟦%0A
-Name: ${bName}%0A
-Place: ${bPlace}%0A
-Phone: ${bPhone}%0A
-Email: ${bEmail}%0A
-Duration: ${bDuration}%0A
-Room Type: ${bRoom}%0A
-Members: ${bMembers}%0A
+`🟦 New Room Booking 🟦
+Name: ${bName}
+Place: ${bPlace}
+Phone: ${bPhone}
+Email: ${bEmail}
+Duration: ${bDuration}
+Room Type: ${bRoom}
+Members: ${bMembers}
 Please confirm the booking.`;
 
-        const url = `https://wa.me/${targetNumber}?text=${msg}`;
+        const url = `https://wa.me/${targetNumber}?text==${encodeURIComponent(msg)}`;
         window.open(url, "_blank");
         return;
     }
@@ -273,14 +273,14 @@ Please confirm the booking.`;
         return alert("Please provide your name and phone.");
 
     const msg =
-`🟦 New Contact Message 🟦%0A
-Name: ${firstName} ${lastName}%0A
-Email: ${email}%0A
-Phone: ${phone}%0A
-Message: %0A
+`🟦 New Contact Message 🟦
+Name: ${firstName} ${lastName}
+Email: ${email}
+Phone: ${phone}
+Message: 
 ${msgText}`;
 
-    const url = `https://wa.me/${targetNumber}?text=${msg}`;
+    const url = `https://wa.me/${targetNumber}?text=${encodeURIComponent(msg)}`;
     window.open(url, "_blank");
 }
 
