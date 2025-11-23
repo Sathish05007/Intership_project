@@ -222,7 +222,7 @@ document.querySelectorAll(".faq-question").forEach(btn => {
 /* ---------- WhatsApp sending (single function handles both contexts) ---------- */
 
 function sendWhatsApp() {
-  const targetNumber = "91 9007062180";
+  const targetNumber = "919007062180";
 
   // ---------- BOOKING FORM ----------
   if (bookingModal && bookingModal.style.display !== "none") {
