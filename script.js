@@ -1,11 +1,3 @@
-/* ---------------------------
-   Kingsukh Guest House — script
-   - Supports: place modal (openModal('baranti')), booking modal (openModal())
-   - Single closeModal() that closes either modal
-   - sendWhatsApp() handles both contact form (contact section) and booking form
-   - Feedback reviews saved to localStorage and auto-scroll right->left
-   --------------------------- */
-
 /* ---------- Place info ---------- */
 const info = {
   baranti: `<h2>Baranti Lake</h2>
@@ -228,15 +220,9 @@ document.querySelectorAll(".faq-question").forEach(btn => {
 });
 
 /* ---------- WhatsApp sending (single function handles both contexts) ---------- */
-/*
- - Both booking form and contact form call sendWhatsApp() in your HTML.
- - This function detects whether booking modal is currently open.
- - If booking modal visible -> read booking form values (from inside #bookingForm).
- - Otherwise -> read contact form values (from inside #contactForm).
- - Sends to the number requested by you: 8977239306
-*/
+
 function sendWhatsApp() {
-  const targetNumber = "918977239306";
+  const targetNumber = "91 9007062180";
 
   // ---------- BOOKING FORM ----------
   if (bookingModal && bookingModal.style.display !== "none") {
