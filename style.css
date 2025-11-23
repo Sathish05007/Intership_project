@@ -713,12 +713,6 @@ footer {
 }
 
 
-/* ---------------- WHATSAPP FLOATING BUTTON ANIMATION ---------------- */
-@keyframes wBounce {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-  100% { transform: translateY(0); }
-}
 
 .d-message {
   position: fixed;
@@ -733,6 +727,12 @@ footer {
   height: 55px;
   border-radius: 50%;
   animation: wBounce 2s infinite ease-in-out;
+}
+/* ---------------- WHATSAPP FLOATING BUTTON ANIMATION ---------------- */
+@keyframes wBounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
 }
 
 /* ------------ CENTER SOCIAL ICONS IN FOOTER ------------- */

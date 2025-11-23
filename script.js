@@ -223,69 +223,67 @@ document.querySelectorAll(".faq-question").forEach(btn => {
 /* ---------- WhatsApp sending (single function handles both contexts) ---------- */
 
 function sendWhatsApp() {
-  const targetNumber = "919007062180";
+    const targetNumber = "919007062180";
 
-  // ---------- BOOKING FORM ----------
-  if (bookingModal && bookingModal.style.display !== "none") {
-    const bf = document.getElementById("bookingForm");
-    if (!bf) return alert("Booking form not found.");
+    const bookingModal = document.getElementById("bookingModal");
 
-    const bName = (bf.querySelector("#name")?.value || "").trim();
-    const bPlace = (bf.querySelector("#place")?.value || "").trim();
-    const bPhone = (bf.querySelector("#phone")?.value || "").trim();
-    const bEmail = (bf.querySelector("#email")?.value || "").trim();
-    const bDuration = (bf.querySelector("#duration")?.value || "").trim();
-    const bRoom = (bf.querySelector("#roomType")?.value || "").trim();
-    const bMembers = (bf.querySelector("#members")?.value || "").trim();
+    // ---------- BOOKING FORM ----------
+    if (bookingModal && bookingModal.style.display !== "none") {
+        const bf = document.getElementById("bookingForm");
+        if (!bf) return alert("Booking form not found.");
 
-    if (!bName || !bPhone)
-      return alert("Please provide name and phone for booking.");
+        const bName = (bf.querySelector("#name")?.value || "").trim();
+        const bPlace = (bf.querySelector("#place")?.value || "").trim();
+        const bPhone = (bf.querySelector("#phone")?.value || "").trim();
+        const bEmail = (bf.querySelector("#email")?.value || "").trim();
+        const bDuration = (bf.querySelector("#duration")?.value || "").trim();
+        const bRoom = (bf.querySelector("#roomType")?.value || "").trim();
+        const bMembers = (bf.querySelector("#members")?.value || "").trim();
 
-    // NORMAL message (no %0A)
-    let msg =
-`🟦 New Room Booking 🟦
+        if (!bName || !bPhone)
+            return alert("Please provide name and phone for booking.");
 
-Name: ${bName}
-Place: ${bPlace}
-Phone: ${bPhone}
-Email: ${bEmail}
-Duration: ${bDuration}
-Room Type: ${bRoom}
-Members: ${bMembers}
-
+        const msg =
+`🟦 New Room Booking 🟦%0A
+Name: ${bName}%0A
+Place: ${bPlace}%0A
+Phone: ${bPhone}%0A
+Email: ${bEmail}%0A
+Duration: ${bDuration}%0A
+Room Type: ${bRoom}%0A
+Members: ${bMembers}%0A
 Please confirm the booking.`;
 
-    const url = `https://api.whatsapp.com/send?phone=${targetNumber}&text=${encodeURIComponent(msg)}`;
-    window.open(url, "_blank");
-    return;
-  }
+        const url = `https://wa.me/${targetNumber}?text=${msg}`;
+        window.open(url, "_blank");
+        return;
+    }
 
-  // ---------- CONTACT FORM ----------
-  const cf = document.getElementById("contactForm");
-  if (!cf) return alert("Contact form not found.");
+    // ---------- CONTACT FORM ----------
+    const cf = document.getElementById("contactForm");
+    if (!cf) return alert("Contact form not found.");
 
-  const firstName = (cf.querySelector('input[placeholder="First Name"]')?.value || "").trim();
-  const lastName = (cf.querySelector('input[placeholder="Last Name"]')?.value || "").trim();
-  const email = (cf.querySelector('input[placeholder="Email Address"]')?.value || "").trim();
-  const phone = (cf.querySelector('input[placeholder="Mobile Number"]')?.value || "").trim();
-  const msgText = (cf.querySelector("textarea")?.value || "").trim();
+    const firstName = (cf.querySelector('input[placeholder="First Name"]')?.value || "").trim();
+    const lastName = (cf.querySelector('input[placeholder="Last Name"]')?.value || "").trim();
+    const email = (cf.querySelector('input[placeholder="Email Address"]')?.value || "").trim();
+    const phone = (cf.querySelector('input[placeholder="Mobile Number"]')?.value || "").trim();
+    const msgText = (cf.querySelector("textarea")?.value || "").trim();
 
-  if (!firstName || !phone)
-    return alert("Please provide your name and phone.");
+    if (!firstName || !phone)
+        return alert("Please provide your name and phone.");
 
-  let msg =
-`🟦 New Contact Message 🟦
-
-Name: ${firstName} ${lastName}
-Email: ${email}
-Phone: ${phone}
-
-Message:
+    const msg =
+`🟦 New Contact Message 🟦%0A
+Name: ${firstName} ${lastName}%0A
+Email: ${email}%0A
+Phone: ${phone}%0A
+Message: %0A
 ${msgText}`;
 
-  const url = `https://api.whatsapp.com/send?phone=${targetNumber}&text=${encodeURIComponent(msg)}`;
-  window.open(url, "_blank");
+    const url = `https://wa.me/${targetNumber}?text=${msg}`;
+    window.open(url, "_blank");
 }
+
 
 
 /* ---------- Initialize everything on load ---------- */
