@@ -716,7 +716,7 @@ footer {
 
 .d-message {
   position: fixed;
-  bottom: 30px;
+  bottom: 100px;
   right: 30px;
   height: auto;
   width: auto;
@@ -918,7 +918,10 @@ section{
 }
 
 @media screen and (max-width:376px) and (min-width:322px){
-    .d-message {
+  .modal-content {
+    width: 100%;
+  }
+  .d-message {
     width: 16%;
     margin: 10px;
   }
