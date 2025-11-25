@@ -58,9 +58,9 @@ All sections adjust using **flexbox, grid, and media queries**.
 ## ⚡ How to Use
 
 1. Clone the repository:  
-   ```bash
+   bash
    git clone <repository-url>
-````
+
 
 2. Open `index.html` in your browser.
 3. Make sure the `img` folder contains all images referenced in the CSS.
@@ -82,8 +82,3 @@ This project is **open-source**.
 
 **Sathish Ejjagiri**
 
-
-If you want, I can also **write a shorter “portfolio-style” README** that’s more visual and beginner-friendly, which is perfect if you’re going to show this on GitHub for recruiters.  
-
-Do you want me to do that version too?
-```
